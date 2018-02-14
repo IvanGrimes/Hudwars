@@ -1,0 +1,89 @@
+.team
+	width: 100%
+	&--ct
+		@media screen and (max-width: 1550px)
+			width: 392px
+			grid-column: 3 / 4
+		@media screen and (max-width: 1180px)
+			grid-column: 4 / 6
+		@media screen and (max-width: 785px)
+			grid-column: 1 / 4
+			width: 100%
+	&--tt
+		@media screen and (max-width: 1550px)
+			width: 392px
+			grid-column: 4 / 6
+		@media screen and (max-width: 1180px)
+			margin: -15px 0 0 0
+		@media screen and (max-width: 785px)
+			grid-column: 1 / 4
+			width: 100%
+			margin: 0
+	&__header
+		display: flex
+		background-color: $team-header
+		padding: 0 30px
+		height: 116px
+		flex-wrap: wrap
+		align-items: center
+		align-content: center
+		font-family: 'Poppins'
+		font-weight: 300
+	&__info
+		order: 0
+		width: 70%
+		margin: -22px 0 0 2px
+		&--side
+			color: $team-side-text
+			font-size: .8rem
+		&--team-name
+			color: $team-name-text
+			margin: 0 0 0 6px
+	&__bets
+		order: 1
+		width: 70%
+		font-size: .6rem
+		margin: -15px 0 0 3px
+		&--ct
+			color: $team-bet-ct-text
+		&--tt
+			color: $team-bet-tt-text
+		&--bet
+			letter-spacing: 1.5px
+			margin: 0 0 0 -1px
+			&-odds
+				margin: 0 0 0 5px
+				letter-spacing: .5px
+				color: $team-bet-text
+	&__button
+		border: none
+		position: relative
+		background-color: $team-btn
+		color: $team-btn-text
+		font-size: .8rem
+		justify-content: space-between
+		padding: 0 0 0 17px
+		line-height: 1
+		margin: 3px 0 0 -9px
+		&::before
+			position: absolute
+			content: ''
+			width: 1px
+			height: 13px
+			background-color: $team-btn-pipe
+			top: 0
+			left: 0
+			margin: 10px 0 0 12px
+		&--icon
+			width: 28px
+			height: 28px
+			margin: -6px -5px 0 0
+		&--ct
+			stroke: $team-ct-color
+		&--tt
+			stroke: $team-tt-color
+		&--wrap
+			width: calc(30% - 2px)
+			@media screen and (max-width: 785px)
+				display: flex
+				justify-content: flex-end

@@ -1,0 +1,207 @@
+.player
+	position: relative
+	display: flex
+	background-color: $player
+	height: 81px
+	align-items: center
+	border-bottom: 1px solid $player-border
+	justify-content: flex-start
+	@media screen and (max-width: 785px)
+		justify-content: space-around
+	&--dead
+		background-color: $player-dead
+		&::after
+			font-family: 'Poppins'
+			font-weight: 300
+			font-size: .575rem
+			letter-spacing: 1.2px
+			position: absolute
+			top: 33px
+			right: 35px
+			content: 'Dead'
+			color: $player-dead-text
+	&__color
+		&--ct
+			color: $player-ct-color
+		&--tt
+			color: $player-tt-color
+
+	&__stats
+		display: flex
+		width: 8px
+		height: 100%
+		align-items: flex-end
+		@media screen and (max-width: 785px)
+			position: absolute
+			left: 0
+		&--hp
+			width: 3px
+			height: 0
+			border-top-left-radius: 1px
+			border-top-right-radius: 1px
+			&--ct
+				background-color: $player-hp-ct
+			&--tt
+				background-color: $player-hp-tt
+		&--armor
+			width: 3px
+			height: 0
+			margin: 0 0 0 2px
+			background-color: $player-armor
+			border-top-left-radius: 1px
+			border-top-right-radius: 1px
+	&__utils
+		display: flex
+		flex-wrap: wrap
+		width: 52px
+		margin: 0 0 0 24px
+		&--disable
+			opacity: .7
+		&--item
+			width: 24px
+			height: 24px
+			background-color: $player-util-item
+			border-radius: 5px
+			&:first-child
+				margin: 0 0 4px 0
+			&:last-child
+				margin: 4px 0 0 0
+			&:nth-child(even)
+				margin: 0 0 0 4px
+		&--defuse
+			&--icon
+				display: none
+				position: relative
+				top: 4px
+				left: 3px
+				display: none
+		&--c4
+			&--icon
+				display: none
+				position: relative
+				top: 8px
+				left: 5px
+		&--armor
+			&--icon
+				display: none
+				position: relative
+				top: 4px
+				left: 4px
+		&--blind
+			background-color: $player-util-blind
+			&--icon
+				display: none
+				position: relative
+				top: 6px
+				left: 5px
+		&--burn
+			background-color: $player-util-burn
+			&--icon
+				display: none
+				position: relative
+				top: 5px
+				left: 7px
+		&--display
+			display: block
+
+	&__info
+		display: flex
+		flex-wrap: wrap
+		font-family: 'Poppins'
+		font-weight: 300
+		line-height: 1.8
+		width: 70px
+		margin: 0 0 0 25px
+		@media screen and (max-width: 374px)
+			margin: 0 0 0 10px
+		&--name
+			width: 100%
+			font-size: .775rem
+			letter-spacing: .4px
+			margin: 0 0 0 -1px
+			color: $player-name
+			&--disable
+				opacity: .7
+		&--bet
+			width: 100%
+			font-size: .575rem
+			letter-spacing: 1.25px
+
+	&__grenades
+		display: flex
+		fill: $player-grenade
+		align-self: flex-end
+		justify-content: flex-end
+		margin: 0 0 16px -23px
+		width: 83px
+		@media screen and (max-width: 400px)
+			padding: 0 5px 0 0
+		&--he
+			display: none
+			width: 8px
+			height: 16px
+			margin: 0 0 0 7px
+		&--flash
+			display: none
+			width: 20px
+			height: 16px
+			margin: 0 0 0 7px
+			// add .player__grenades--flash-only to the flash grenade in html if it only one item in a wrap
+			&-only
+				margin: 0 -5px 0 0
+		&--smoke
+			display: none
+			width: 8px
+			height: 16px
+			margin: 0 0 0 7px
+		&--fire
+			display: none
+			width: 12px
+			height: 16px
+			margin: 0 0 0 7px
+		&--molotov
+			display: none
+			width: 14px
+			height: 20px
+			margin: -3px 0 0 7px
+		&--display
+			display: block
+		&--item
+		&--icon
+		&--active
+
+	&__weapon
+		display: flex
+		fill: $player-weapon
+		flex-wrap: wrap
+		width: 85px
+		margin: 0 0 0 33px
+		@media screen and (max-width: 374px)
+			margin:  0 0 0 10px
+		&--primary
+			margin: 0 0 13px 0
+		&--secondary
+		&--awp
+			width: 84px
+			height: 16px
+		&--usp-s
+			width: 44px
+			height: 16px
+		&--m4a1-s
+			width: 80px
+			height: 20px
+		&--deserteagle
+			width: 30px
+			height: 17px
+		&--galil
+			width: 68px
+			height: 22px
+		&--ak47
+			width: 69px
+			height: 20px
+		&--glock
+			width: 27px
+			height: 17px
+		&--icon
+		&--active
+			fill: $player-weapon-active

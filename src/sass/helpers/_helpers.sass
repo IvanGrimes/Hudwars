@@ -1,0 +1,15 @@
+.container
+	display: grid
+	grid-template-columns: 30px 363px minmax(0, 1fr) 363px 30px
+	grid-template-rows: auto
+	@media screen and (max-width: 1550px)
+		grid-template-columns: 30px 363px minmax(392px, 1136px) 363px 30px
+	@media screen and (max-width: 1180px)
+		grid-template-columns: 30px 363px minmax(0, 1136px) 363px 30px
+	@media screen and (max-width: 785px)
+		grid-template-columns: 30px minmax(363px, 100%) 30px
+	@media screen and (max-width: 414px)
+		grid-template-columns: 15px minmax(290px, 414px) 15px
+.container-fluid
+	display: grid
+	grid-template-rows: auto

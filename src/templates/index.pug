@@ -1,0 +1,765 @@
+doctype html
+html(lang="en")
+	include partials/head
+	body
+		include partials/svg
+		div(class="container")
+			header(class="header")
+				div(class="header__left")
+					div(class="header__logo")
+						span(class="header__logo--icon")
+						span(class="header__logo--text") XCS
+					div(class="header__timer")
+						svg(class="header__timer--icon", viewBox="0 0 16 19")
+							use(xlink:href="#timer")
+						span(class="header__timer--value") 2:43
+					
+				div(class="header--fix")
+				
+				div(class="header__right")
+					div(class="header__right--buttons")
+						a(class="button button__rectangle button__rectangle--size-l header__right--first-button", href="#") Withdraw
+						a(class="button button__rectangle button__rectangle--size-l button__rectangle--mark header__right--second-button", href="#") Deposit
+					div(class="header__right--info")
+						a(class="button button__notification button__notification--has-news", href="#")
+							svg(class="button__notification--icon", viewBox="0 0 28 28")
+								use(xlink:href="#ring")
+						a(class="header__right--profile", href="") DS
+						
+						
+			div(class="sidebar sidebar--left")
+				ul(class="menu")
+					li(class="menu__item")
+						svg(class="menu__icon", viewBox="0 0 28 19")
+							use(xlink:href="#dashboard")
+						a(class="menu__link", href="#") Dashboard
+						
+					li(class="menu__item")
+						svg(class="menu__icon", viewBox="0 0 28 19")
+							use(xlink:href="#players")
+						a(class="menu__link", href="#") Players
+						
+					li(class="menu__item")
+						svg(class="menu__icon", viewBox="0 0 28 19")
+							use(xlink:href="#teams")
+						a(class="menu__link", href="#") Teams
+						
+					li(class="menu__item")
+						svg(class="menu__icon", viewBox="0 0 28 19")
+							use(xlink:href="#matches")
+						a(class="menu__link", href="#") Matches
+						
+					li(class="menu__item menu__item--separate menu__item--chat")
+						svg(class="menu__icon", viewBox="0 0 28 19")
+							use(xlink:href="#chat")
+						a(class="menu__link", href="#") Chat
+						
+						div(class="menu__item--counter") 
+							span(class="menu__item--counter-users") Users:
+							span(class="menu__item--counter-value") 10 202
+							
+				div(class="chat")
+					div(class="chat__message-area")
+						div(class="chat__message")
+							img(class="chat__message--avatar", src="img/avatar.jpg", alt="")
+							div(class="chat__message--content")
+								div(class="chat__message--info")
+									span(class="chat__message--username") Sweetgirl
+									span(class="chat__message--time") 19:23
+								div(class="chat__message--text")
+									p Hello world. How play in this game?
+									
+						div(class="chat__message")
+							img(class="chat__message--avatar", src="img/avatar.jpg", alt="")
+							div(class="chat__message--content")
+								div(class="chat__message--info")
+									span(class="chat__message--username") Sweetgirl
+									span(class="chat__message--time") 19:23
+								div(class="chat__message--text")
+									p Best game ever!! Go in my team!
+									
+						div(class="chat__message")
+							img(class="chat__message--avatar", src="img/avatar.jpg", alt="")
+							div(class="chat__message--content")
+								div(class="chat__message--info")
+									span(class="chat__message--username") Sweetgirl
+									span(class="chat__message--time") 19:23
+								div(class="chat__message--text")
+									p I kill you..:)
+									
+						div(class="chat__message")
+							img(class="chat__message--avatar", src="img/avatar.jpg", alt="")
+							div(class="chat__message--content")
+								div(class="chat__message--info")
+									span(class="chat__message--username") Sweetgirl
+									span(class="chat__message--time") 19:23
+								div(class="chat__message--text")
+									p Hahahah...okay:)))
+
+					form(class="chat__message-form", method="post", action="#")
+						input(class="chat__message-form--input", id="chat__input", type="text", placeholder="Message", required)
+						button(class="button button__rectangle button__rectangle--size-s button__rectangle--mark chat__message-form--button", type="submit")
+							svg(class="chat__message-form--icon", viewBox="0 0 24 24")
+								use(xlink:href="#flypaper")
+							
+
+			div(class="map")
+				//- img(class="map__img", src="img/map.svg", alt="")
+
+				
+			div(class="sidebar sidebar--right")
+				//- CT
+				div(class="team team--ct")
+					//- CT HEADER
+					div(class="team__header")
+						div(class="team__info")
+							span(class="team__info--side") CT
+							span(class="team__info--team-name") Ninjas in Pyjamas
+						
+						div(class="team__bets")
+							span(class="team__bets--bet team__bets--ct") $41.62
+							span(class="team__bets--bet team__bets--bet-odds") Odds: $32.85
+						
+						div(class="team__button--wrap")
+							a(class="button button__rectangle button__rectangle--size-m team__button team__button--ct", href="#") Bet
+								svg(class="team__button--icon", viewBox="0 0 32 1")
+									use(xlink:href="#arrow")
+							
+					//- FIRST CT PLAYER
+					div(class="player", data-hp="100", data-armor="34")
+						//- HP/ARMOR
+						div(class="player__stats")
+							div(class="player__stats--hp player__stats--hp--ct")
+							div(class="player__stats--armor")
+								
+						//- UTILS
+						div(class="player__utils")
+							div(class="player__utils--item")
+								div(class="player__utils--defuse--icon player__utils--display")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#defuse")
+											
+							div(class="player__utils--item")
+								div(class="player__utils--burn--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#burn")
+											
+							div(class="player__utils--item")
+								div(class="player__utils--blind--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#blind")
+								
+							div(class="player__utils--item")
+								div(class="player__utils--armor--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#armordamaged")
+						
+						//- INFO
+						div(class="player__info")
+							span(class="player__info--name player__info--name--active") f0rest
+							span(class="player__info--bet player__color--ct") $3.75
+							
+						//- WEAPONS
+						div(class="player__weapon ")
+							div(class="player__weapon--primary player__weapon--awp ")
+								svg( viewBox="0 0 84 16")
+									use(xlink:href="#awp")
+										
+							div(class="player__weapon--secondary player__weapon--usp-s  player__weapon--active")
+								svg(viewBox="0 0 44 16")
+									use(xlink:href="#ups")
+										
+						
+						//- GRENADES
+						div(class="player__grenades")
+							div(class="player__grenades--he")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--flash player__grenades--display player__grenades--flash-only")
+								svg(viewBox="0 0 20 16")
+									use(xlink:href="#flash")
+				
+							div(class="player__grenades--smoke")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--fire")
+								svg(viewBox="0 0 12 16")
+									use(xlink:href="#fire")
+								
+					
+					//- SECOND CT PLAYER
+					div(class="player", data-hp="73", data-armor="9")
+						//- HP/ARMOR
+						div(class="player__stats")
+							div(class="player__stats--hp player__stats--hp--ct")
+							div(class="player__stats--armor")
+						
+						//- UTILS
+						div(class="player__utils")
+							div(class="player__utils--item")
+								div(class="player__utils--defuse--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#defuse")
+											
+							div(class="player__utils--item")
+								div(class="player__utils--burn--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#burn")
+											
+							div(class="player__utils--item player__utils--blind")
+								div(class="player__utils--blind--icon player__utils--display")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#blind")
+								
+							div(class="player__utils--item")
+								div(class="player__utils--armor--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#armordamaged")
+						
+						//- INFO
+						div(class="player__info")
+							span(class="player__info--name player__info--name--active") GeT_RiGhT
+							span(class="player__info--bet player__color--ct") $24.12
+						
+						//- WEAPONS
+						div(class="player__weapon")
+							div(class="player__weapon--primary player__weapon--m4a1-s player__weapon--active")
+								svg(viewBox="0 0 80 20")
+									use(xlink:href="#m4a1-s")
+										
+							div(class="player__weapon--secondary player__weapon--deserteagle")
+								svg(viewBox="0 0 30 17")
+									use(xlink:href="#deserteagle")
+						
+						//- GRENADES
+						div(class="player__grenades")
+							div(class="player__grenades--he player__grenades--display")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--flash player__grenades--display")
+								svg(viewBox="0 0 20 16")
+									use(xlink:href="#flash")
+				
+							div(class="player__grenades--smoke player__grenades--display")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--fire player__grenades--display")
+								svg(viewBox="0 0 12 16")
+									use(xlink:href="#fire")
+								
+					//- THIRD CT PLAYER
+					div(class="player", data-hp="85", data-armor="5")
+						//- HP/ARMOR
+						div(class="player__stats")
+							div(class="player__stats--hp player__stats--hp--ct")
+							div(class="player__stats--armor")
+						
+						//- UTILS
+						div(class="player__utils")
+							div(class="player__utils--item")
+								div(class="player__utils--defuse--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#defuse")
+											
+							div(class="player__utils--item player__utils--burn")
+								div(class="player__utils--burn--icon player__utils--display")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#burn")
+											
+							div(class="player__utils--item")
+								div(class="player__utils--blind--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#blind")
+								
+							div(class="player__utils--item")
+								div(class="player__utils--armor--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#armordamaged")
+						
+						//- INFO
+						div(class="player__info")
+							span(class="player__info--name player__info--name--active") Xizt
+							span(class="player__info--bet player__color--ct") $2.29
+						
+						//- WEAPONS
+						div(class="player__weapon ")
+							div(class="player__weapon--primary")
+										
+							div(class="player__weapon--secondary player__weapon--deserteagle player__weapon--active")
+								svg(viewBox="0 0 30 17")
+									use(xlink:href="#deserteagle")
+						
+						//- GRENADES
+						div(class="player__grenades")
+							div(class="player__grenades--he player__grenades--display")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--flash player__grenades--display")
+								svg(viewBox="0 0 20 16")
+									use(xlink:href="#flash")
+				
+							div(class="player__grenades--smoke player__grenades--display")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--fire player__grenades--display")
+								svg(viewBox="0 0 12 16")
+									use(xlink:href="#fire")
+								
+					//- FOURTH CT PLAYER
+					div(class="player player--dead", data-hp="0", data-armor="0")
+						//- HP/ARMOR
+						div(class="player__stats")
+							div(class="player__stats--hp player__stats--hp--ct")
+							div(class="player__stats--armor")
+						
+						//- UTILS
+						div(class="player__utils player__utils--disable")
+							div(class="player__utils--item")
+								div(class="player__utils--defuse--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#defuse")
+											
+							div(class="player__utils--item")
+								div(class="player__utils--burn--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#burn")
+											
+							div(class="player__utils--item")
+								div(class="player__utils--blind--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#blind")
+								
+							div(class="player__utils--item")
+								div(class="player__utils--armor--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#armordamaged")
+						
+						//- INFO
+						div(class="player__info")
+							span(class="player__info--name player__info--name--disable") friberg
+							span(class="player__info--bet player__color--ct") $1.12
+						
+						//- WEAPONS
+						div(class="player__weapon")
+							div(class="player__weapon--primary player__weapon--disable")
+							div(class="player__weapon--secondary player__weapon--desert-eagle")
+								
+						div(class="player__grenades")
+							div(class="player__grenades--he")
+								svg(viewBox="0 0 12 16")
+									use(xlink:href="#he")
+										
+							div(class="player__grenades--flash")
+								svg(viewBox="0 0 20 16")
+									use(xlink:href="#flash")
+										
+							div(class="player__grenades--smoke")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+										
+							div(class="player__grenades--smoke")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+					//- FIFTH CT PLAYER
+					div(class="player", data-hp="100", data-armor="100")
+						//- HP/ARMOR
+						div(class="player__stats")
+							div(class="player__stats--hp player__stats--hp--ct")
+							div(class="player__stats--armor")
+						
+						//- UTILS
+						div(class="player__utils")
+							div(class="player__utils--item")
+								div(class="player__utils--defuse--icon player__utils--display")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#defuse")
+											
+							div(class="player__utils--item")
+								div(class="player__utils--burn--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#burn")
+											
+							div(class="player__utils--item player__utils--blind")
+								div(class="player__utils--blind--icon player__utils--display")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#blind")
+								
+							div(class="player__utils--item player__utils--armor")
+								div(class="player__utils--armor--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#armordamaged")
+						
+						//- INFO
+						div(class="player__info")
+							span(class="player__info--name player__info--name--active") pyth
+							span(class="player__info--bet player__color--ct") $14.53
+						
+						//- WEAPONS
+						div(class="player__weapon")
+							div(class="player__weapon--primary player__weapon--galil")
+								svg(viewBox="0 0 68 22")
+									use(xlink:href="#galil")
+										
+							div(class="player__weapon--secondary player__weapon--deserteagle")
+								svg(viewBox="0 0 30 17")
+									use(xlink:href="#deserteagle")
+						
+						//- GRENADES
+						div(class="player__grenades")
+							div(class="player__grenades--he player__grenades--display")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--flash player__grenades--display")
+								svg(viewBox="0 0 20 16")
+									use(xlink:href="#flash")
+				
+							div(class="player__grenades--smoke player__grenades--display")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--fire player__grenades--display")
+								svg(viewBox="0 0 12 16")
+									use(xlink:href="#fire")
+				
+				div(class="team team--tt")
+					//- Tt HEADER
+					div(class="team__header")
+						div(class="team__info")
+							span(class="team__info--side") Tt
+							span(class="team__info--team-name") SK Gaming
+						
+						div(class="team__bets")
+							span(class="team__bets--bet team__bets--tt") $33.51
+							span(class="team__bets--bet team__bets--bet-odds") Odds: $17.36
+						
+						div(class="team__button--wrap")
+							a(class="button button__rectangle button__rectangle--size-m team__button team__button--tt", href="#") Bet
+								svg(class="team__button--icon", viewBox="0 0 32 1")
+									use(xlink:href="#arrow")
+							
+					//- FIRST Tt PLAYER
+					div(class="player player--dead")
+						//- HP/ARMOR
+						div(class="player__stats")
+							div(class="player__stats--hp player__stats--hp--tt")
+							div(class="player__stats--armor")
+								
+						//- UTILS
+						div(class="player__utils player__utils--disable")
+							div(class="player__utils--item")
+								div(class="player__utils--c4--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#c4")
+											
+							div(class="player__utils--item")
+								div(class="player__utils--burn--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#burn")
+											
+							div(class="player__utils--item")
+								div(class="player__utils--blind--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#blind")
+								
+							div(class="player__utils--item")
+								div(class="player__utils--armor--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#armordamaged")
+						
+						//- INFO
+						div(class="player__info")
+							span(class="player__info--name player__info--name--disable") TACO
+							span(class="player__info--bet player__color--tt") $1.65
+							
+						//- WEAPONS
+						div(class="player__weapon")
+							div(class="player__weapon--primary")
+										
+							div(class="player__weapon--secondary")
+						
+						//- GRENADES
+						div(class="player__grenades")
+							div(class="player__grenades--he")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--flash")
+								svg(viewBox="0 0 20 16")
+									use(xlink:href="#flash")
+				
+							div(class="player__grenades--smoke")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--molotov")
+								svg(viewBox="0 0 14 20")
+									use(xlink:href="#molotov")
+					
+					//- SECOND Tt PLAYER
+					div(class="player")
+						//- HP/ARMOR
+						div(class="player__stats")
+							div(class="player__stats--hp player__stats--hp--tt")
+							div(class="player__stats--armor")
+						
+						//- UTILS
+						div(class="player__utils")
+							div(class="player__utils--item")
+								div(class="player__utils--c4--icon player__utils--display")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#c4")
+											
+							div(class="player__utils--item")
+								div(class="player__utils--burn--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#burn")
+											
+							div(class="player__utils--item")
+								div(class="player__utils--blind--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#blind")
+								
+							div(class="player__utils--item")
+								div(class="player__utils--armor--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#armordamaged")
+						
+						//- INFO
+						div(class="player__info")
+							span(class="player__info--name player__info--name--active") FalleN
+							span(class="player__info--bet player__color--tt") $3.78
+						
+						//- WEAPONS
+						div(class="player__weapon")
+							div(class="player__weapon--primary player__weapon--ak47")
+								svg(viewBox="0 0 69 20")
+									use(xlink:href="#ak47")
+										
+							div(class="player__weapon--secondary player__weapon--deserteagle")
+								svg(viewBox="0 0 30 17")
+									use(xlink:href="#deserteagle")
+						
+						//- GRENADES
+						div(class="player__grenades")
+							div(class="player__grenades--he player__grenades--display")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--flash player__grenades--display")
+								svg(viewBox="0 0 20 16")
+									use(xlink:href="#flash")
+				
+							div(class="player__grenades--smoke player__grenades--display")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--molotov player__grenades--display")
+								svg(viewBox="0 0 14 20")
+									use(xlink:href="#molotov")
+								
+					//- THIRD Tt PLAYER
+					div(class="player")
+						//- HP/ARMOR
+						div(class="player__stats")
+							div(class="player__stats--hp player__stats--hp--tt")
+							div(class="player__stats--armor")
+						
+						//- UTILS
+						div(class="player__utils")
+							div(class="player__utils--item")
+								div(class="player__utils--c4--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#c4")
+											
+							div(class="player__utils--item")
+								div(class="player__utils--burn--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#burn")
+											
+							div(class="player__utils--item player__utils--blind")
+								div(class="player__utils--blind--icon player__utils--display")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#blind")
+								
+							div(class="player__utils--item")
+								div(class="player__utils--armor--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#armordamaged")
+						
+						//- INFO
+						div(class="player__info")
+							span(class="player__info--name player__info--name--active") fer
+							span(class="player__info--bet player__color--tt") $12.50
+						
+						//- WEAPONS
+						div(class="player__weapon")
+							div(class="player__weapon--primary player__weapon--awp ")
+								svg( viewBox="0 0 84 16")
+									use(xlink:href="#awp")
+										
+							div(class="player__weapon--secondary player__weapon--deserteagle")
+								svg(viewBox="0 0 30 17")
+									use(xlink:href="#deserteagle")
+						
+						//- GRENADES
+						div(class="player__grenades")
+							div(class="player__grenades--he player__grenades--display")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--flash player__grenades--display")
+								svg(viewBox="0 0 20 16")
+									use(xlink:href="#flash")
+				
+							div(class="player__grenades--smoke player__grenades--display")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--molotov player__grenades--display")
+								svg(viewBox="0 0 14 20")
+									use(xlink:href="#molotov")
+								
+					//- FOURTH Tt PLAYER
+					div(class="player")
+						//- HP/ARMOR
+						div(class="player__stats")
+							div(class="player__stats--hp player__stats--hp--tt")
+							div(class="player__stats--armor")
+						
+						//- UTILS
+						div(class="player__utils")
+							div(class="player__utils--item")
+								div(class="player__utils--c4--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#c4")
+											
+							div(class="player__utils--item")
+								div(class="player__utils--burn--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#burn")
+											
+							div(class="player__utils--item")
+								div(class="player__utils--blind--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#blind")
+								
+							div(class="player__utils--item")
+								div(class="player__utils--armor--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#armordamaged")
+						
+						//- INFO
+						div(class="player__info")
+							span(class="player__info--name") fnx
+							span(class="player__info--bet player__color--tt") $2.71
+						
+						//- WEAPONS
+						div(class="player__weapon")
+							div(class="player__weapon--primary player__weapon--ak47")
+								svg(viewBox="0 0 69 20")
+									use(xlink:href="#ak47")
+										
+							div(class="player__weapon--secondary player__weapon--glock")
+								svg(viewBox="0 0 27 17")
+									use(xlink:href="#glock")
+						
+						//- GRENADES
+						div(class="player__grenades")
+							div(class="player__grenades--he player__grenades--display")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--flash player__grenades--display")
+								svg(viewBox="0 0 20 16")
+									use(xlink:href="#flash")
+				
+							div(class="player__grenades--smoke player__grenades--display")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--molotov player__grenades--display")
+								svg(viewBox="0 0 14 20")
+									use(xlink:href="#molotov")
+										
+										
+					//- FIFTH Tt PLAYER
+					div(class="player")
+						//- HP/ARMOR
+						div(class="player__stats")
+							div(class="player__stats--hp player__stats--hp--tt")
+							div(class="player__stats--armor")
+						
+						//- UTILS
+						div(class="player__utils")
+							div(class="player__utils--item")
+								div(class="player__utils--c4--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#c4")
+											
+							div(class="player__utils--item")
+								div(class="player__utils--burn--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#burn")
+											
+							div(class="player__utils--item")
+								div(class="player__utils--blind--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#blind")
+								
+							div(class="player__utils--item")
+								div(class="player__utils--armor--icon")
+									svg(viewBox="0 0 24 24")
+										use(xlink:href="#armordamaged")
+						
+						//- INFO
+						div(class="player__info")
+							span(class="player__info--name player__info--name--active") Coldzera
+							span(class="player__info--bet player__color--tt") $9.81
+						
+						//- WEAPONS
+						div(class="player__weapon")
+							div(class="player__weapon--primary player__weapon--galil")
+								svg(viewBox="0 0 68 22")
+									use(xlink:href="#galil")
+										
+							div(class="player__weapon--secondary player__weapon--deserteagle")
+								svg(viewBox="0 0 30 17")
+									use(xlink:href="#deserteagle")
+						
+						//- GRENADES
+						div(class="player__grenades")
+							div(class="player__grenades--he player__grenades--display")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--flash player__grenades--display")
+								svg(viewBox="0 0 20 16")
+									use(xlink:href="#flash")
+				
+							div(class="player__grenades--smoke player__grenades--display")
+								svg(viewBox="0 0 8 16")
+									use(xlink:href="#smoke")
+							
+							div(class="player__grenades--molotov player__grenades--display")
+								svg(viewBox="0 0 14 20")
+									use(xlink:href="#molotov")
+								
+								
+			footer(class="footer")
+				div(class="footer__copy")
+					p &copy; 2018 Hudwars. All rights reserved.
+				
+				div(class="footer__support")
+					a(class="button button__square button__square--size-s footer__support--button", href="#")
+						svg(class="footer__support--icon", viewBox="0 0 27 24")
+							use(xlink:href="#chat")
+						
+		script(src='js/app.js')

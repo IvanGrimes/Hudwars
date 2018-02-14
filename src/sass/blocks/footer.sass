@@ -1,0 +1,37 @@
+.footer
+	display: flex
+	height: 81px
+	background-color: $footer
+	grid-column: 1 / 6
+	align-items: center
+	margin-top: auto
+	@media screen and (max-width: 785px)
+		grid-row: 7 / 8
+	&__copy
+		font-family: 'Poppins'
+		font-size: .725em
+		letter-spacing: .5px
+		color: $footer-copy-text
+		margin: 0 0 0 80px
+		width: 75%
+		@media screen and (max-width: 785px)
+			margin: 15px
+	&__support
+		display: flex
+		margin: 0 12px 0 0
+		width: 25%
+		justify-content: flex-end
+		align-items: center
+		@media screen and (max-width: 785px)
+			margin: 0 15px 0 0
+		&--button
+			&:hover
+				.footer__support--icon
+					fill: lighten($footer-button-icon, 20%)
+		&--icon
+			display: flex
+			width: 27px
+			height: 24px
+			margin: -4px 0 0 2px
+			fill: $footer-button-icon
+			transition: fill .2s linear

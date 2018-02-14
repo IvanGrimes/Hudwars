@@ -1,0 +1,54 @@
+.menu
+	padding: 40px 0 0 30px
+	background-color: $menu
+	&__item
+		display: flex
+		margin: 40px 0 0 0
+		align-items: center
+		height: 24px
+		&:first-child
+			margin: 0
+		&:hover
+			.menu__icon
+				fill: lighten($menu-icon, 20%)
+		&--separate
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				left: -30px
+				top: 0
+				height: 2px
+				width: calc(100% + 30px)
+				background-color: $menu-separate-second
+				border-top: 1px solid $menu-separate-first
+		&--chat
+			height: 73px
+			margin: 24px 0 0 0
+			padding: 4px 0 0 0
+		&--counter
+			position: absolute
+			right: 0
+			margin: -1px 33px 0 0
+			font-family: 'Poppins'
+			font-weight: 300
+			color: $chat-counter-text
+			&-users
+				font-size: .6875rem
+			&-value
+				font-size: .6rem
+				letter-spacing: .65px
+	&__icon
+		width: 32px
+		height: 32px
+		margin: -4px 0 0 2px
+		fill: $menu-icon
+		transition: fill .2s linear
+	&__link
+		font-family: 'Poppins'
+		font-weight: 300
+		color: $menu-link
+		margin: 0 0 0 21px
+		font-size: .9rem
+		letter-spacing: -.25px
+		width: 100%

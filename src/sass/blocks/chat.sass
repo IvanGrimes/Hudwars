@@ -1,0 +1,159 @@
+.chat
+	grid-column: 1 / 3
+	width: 391px
+	background-color: $chat
+	padding: 30px 30px 40px 30px
+	@media screen and (max-width: 1550px)
+		padding: 30px 30px 50px 30px
+	@media screen and (max-width: 785px)
+		border-right: 0
+		width: 100%
+	@media screen and (max-width: 414px)
+		padding: 30px 15px 50px 15px
+	&__message-area
+		display: flex
+		flex-wrap: wrap
+		overflow-y: scroll
+		height: auto
+		align-content: flex-start
+		&::-o-scrollbar
+			display: none
+		&::-webkit-scrollbar
+			display: none
+		@media screen and (max-width: 1550px)
+			height: 70.75vw
+			pad
+		@media screen and (max-width: 785px)
+			width: 100%
+	&__message
+		display: flex
+		width: 100%
+		&:nth-child(odd)
+			justify-content: flex-start
+			margin: 30px 0 0 2px
+		&:nth-child(even)
+			justify-content: flex-end
+			margin: 41px 0 0 2px
+			@media screen and (max-width: 785px)
+				margin: 41px 0 0 2px
+		&-area
+			display: flex
+		&--avatar
+			width: 48px
+			height: 48px
+			border-radius: 50%
+		&--content
+			font-family: 'Poppins'
+			font-weight: 300
+			position: relative
+			width: 218px
+			background-color: $chat-message
+			padding: 13px 23px 13px 25px
+			min-height: 90px
+			max-height: 1000px
+			border-radius: 16px
+			@media screen and (max-width: 785px)
+				width: 100%
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				width: 0
+				height: 0
+				border-style: solid
+
+		&--info
+			display: flex
+			margin: -1px 0 0 0
+		&--username
+			display: flex
+			width: 70%
+			font-size: .675rem
+			align-items: center
+			color: $chat-message-username
+			&::before
+				content: '@'
+				font-size: .5rem
+				line-height: 0
+		&--time
+			display: flex
+			width: 30%
+			font-size: .62rem
+			letter-spacing: .85px
+			color: $chat-message-date
+		&--text
+			word-wrap: break-word
+			font-size: .8rem
+			color: $chat-message-text
+			line-height: 1.25
+			margin: 8px 0 0 0
+			word-spacing: 1.4px
+
+		&:nth-child(odd)
+			.chat__message--avatar
+				order: 0
+			.chat__message--username
+				order: 0
+				justify-content: flex-start
+			.chat__message--time
+				order: 1
+				justify-content: flex-end
+			.chat__message--content
+				margin: 5px 0 0 19px
+				&::before
+					border-width: 6.5px 12px 6.5px 0
+					border-color: transparent $chat-message-triangle transparent transparent
+					left: 0
+					margin: 12px 0 0 -11px
+
+		&:nth-child(even)
+			.chat__message--avatar
+				order: 1
+				margin: -6px 0 0 0
+			.chat__message--username
+				order: 1
+				width: 45%
+				@media screen and (max-width: 785px)
+					justify-content: flex-end
+			.chat__message--time
+				order: 0
+				width: 55%
+				justify-content: flex-start
+				margin: 0 0 0 5px
+			.chat__message--text
+				margin: 8px 0 0 3px
+			.chat__message--content
+				margin: 0 20px 0 0
+				&::before
+					right: 0
+					border-width: 6px 0 6px 12px
+					border-color: transparent transparent transparent $chat-message-triangle
+					margin: 12px -11px 0 0
+	&__message-form
+		display: flex
+		grid-column: 2 / 3
+		margin: 61px 0 0 2px
+		@media screen and (max-width: 1550px)
+			margin: 40px 0 0 2px
+		&--input
+			font-family: 'Poppins'
+			font-weight: 300
+			font-size: .785rem
+			background-color: $chat-input
+			color: $chat-input-text
+			width: 264px
+			height: 36px
+			border-radius: 4px
+			padding: 0 18px 1px 18px
+			&::placeholder
+				color: $chat-input-text
+			@media screen and (max-width: 785px)
+				width: 100%
+		&--button
+			position: relative
+			margin: -1px 0 0 12px
+		&--icon
+			fill: currentColor
+			margin: 6px 0 0 5px
+			width: 75%
+			height: 75%
